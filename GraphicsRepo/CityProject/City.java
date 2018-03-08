@@ -13,11 +13,10 @@ public class City extends Applet
    private TVScreen screen;
    private Road road;
    private CouchDude furniture;
-   private Background city_back;
    
    public void init()
    {
-       moon = new Moon();   
+       moon = new Moon(700,50);   
        building1 = new Building_close();
        building2 = new Building_2();
        building3 = new Building_3();
@@ -25,14 +24,12 @@ public class City extends Applet
        screen = new TVScreen();
        road = new Road();
        furniture = new CouchDude();
-       city_back = new Background();
        setBackground(sky);
    }
    
    public void paint(Graphics page)
    {
        moon.draw(page);
-       city_back.draw(page);
        grass.draw(page);
        road.draw(page);
        building1.draw(page);
@@ -40,6 +37,7 @@ public class City extends Applet
        building3.draw(page);
        screen.draw(page,new Color(206,206,206));
        furniture.draw(page);
+       
        
        try
        {
@@ -67,6 +65,7 @@ public class City extends Applet
        
        screen.draw(page,new Color(249,120,120));
        furniture.draw(page);
+       moon.move(1,1);
        
        repaint();
    }

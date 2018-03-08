@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Moon()
+comment0.params=xpos\ ypos
+comment0.target=Moon(int,\ int)
 comment1.params=page
 comment1.target=void\ draw(java.awt.Graphics)
-numComments=2
+comment2.params=xmove\ ymove
+comment2.target=void\ move(int,\ int)
+numComments=3
